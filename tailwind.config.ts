@@ -63,14 +63,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for the safety summit
-				'safety-blue': '#0A2463',
-				'safety-red': '#D8315B',
+				// Updated custom colors for the safety summit
+				'safety-green': '#429354',
+				'safety-black': '#000000',
 				'safety-gray': '#3E4C59',
 				'safety-light': '#F9FAFB',
 				'safety-dark': '#1A2A36',
 			},
 			fontFamily: {
+				'inter-tight': ['"Inter Tight"', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
 				montserrat: ['Montserrat', 'sans-serif'],
 				opensans: ['Open Sans', 'sans-serif'],
 			},
