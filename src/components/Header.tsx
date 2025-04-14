@@ -1,7 +1,7 @@
 
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from './ui/button';
 
@@ -13,55 +13,42 @@ const Header: FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm shadow-[0_4px_30px_rgba(66,147,84,0.1)]">
       <div className="container-custom flex justify-between items-center py-4">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <div className="flex items-center space-x-2">
-              <svg 
-                viewBox="0 0 24 24" 
-                className="h-8 w-8 text-safety-blue" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              >
-                <path d="M12 2L4 6v12l8 4 8-4V6z" />
-                <path d="M12 22V12" />
-                <path d="M12 12L4 6" />
-                <path d="M12 12l8-6" />
-              </svg>
-              <span className="font-montserrat font-bold text-xl text-safety-blue">Safety Summit</span>
+              <Shield className="h-8 w-8 text-safety-green" strokeWidth={2} />
+              <span className="font-inter-tight font-bold text-xl text-white">Safety Summit</span>
             </div>
           </Link>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="font-semibold hover:text-safety-red transition-colors">Home</Link>
-          <Link to="#speakers" className="font-semibold hover:text-safety-red transition-colors">Speakers</Link>
-          <Link to="#sessions" className="font-semibold hover:text-safety-red transition-colors">Sessions</Link>
-          <Link to="/register" className="font-semibold hover:text-safety-red transition-colors">Register</Link>
+          <Link to="/" className="font-semibold text-white hover:text-safety-green transition-colors">Home</Link>
+          <Link to="#speakers" className="font-semibold text-white hover:text-safety-green transition-colors">Speakers</Link>
+          <Link to="#sessions" className="font-semibold text-white hover:text-safety-green transition-colors">Sessions</Link>
+          <Link to="/register" className="font-semibold text-white hover:text-safety-green transition-colors">Register</Link>
           <Button className="btn-primary">Register Now</Button>
         </nav>
         
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="p-2">
+          <button onClick={toggleMenu} className="p-2 text-white hover:text-safety-green transition-colors">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
       
       {isMenuOpen && (
-        <div className="md:hidden bg-white py-4 px-4 shadow-lg animate-fade-in">
+        <div className="md:hidden bg-black/95 py-4 px-4 shadow-lg animate-fade-in border-t border-white/10">
           <nav className="flex flex-col space-y-4">
-            <Link to="/" className="font-semibold py-2 hover:text-safety-red transition-colors"
+            <Link to="/" className="font-semibold py-2 text-white hover:text-safety-green transition-colors"
               onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="#speakers" className="font-semibold py-2 hover:text-safety-red transition-colors"
+            <Link to="#speakers" className="font-semibold py-2 text-white hover:text-safety-green transition-colors"
               onClick={() => setIsMenuOpen(false)}>Speakers</Link>
-            <Link to="#sessions" className="font-semibold py-2 hover:text-safety-red transition-colors"
+            <Link to="#sessions" className="font-semibold py-2 text-white hover:text-safety-green transition-colors"
               onClick={() => setIsMenuOpen(false)}>Sessions</Link>
-            <Link to="/register" className="font-semibold py-2 hover:text-safety-red transition-colors"
+            <Link to="/register" className="font-semibold py-2 text-white hover:text-safety-green transition-colors"
               onClick={() => setIsMenuOpen(false)}>Register</Link>
             <Button className="btn-primary w-full">Register Now</Button>
           </nav>
