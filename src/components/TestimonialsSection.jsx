@@ -1,33 +1,26 @@
 
-import { FC } from 'react';
 import { Quote } from 'lucide-react';
 
-interface TestimonialProps {
-  quote: string;
-  name: string;
-  title: string;
-}
-
-const Testimonial: FC<TestimonialProps> = ({ quote, name, title }) => {
+const Testimonial = ({ quote, name, title }) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md">
+    <div className="bg-[#111] p-8 rounded-lg shadow-md border border-safety-green/20">
       <div className="text-safety-red mb-4">
         <Quote size={32} />
       </div>
-      <blockquote className="text-lg mb-6">
+      <blockquote className="text-lg mb-6 text-gray-200">
         {quote}
       </blockquote>
       <div>
-        <p className="font-bold">{name}</p>
-        <p className="text-safety-gray">{title}</p>
+        <p className="font-bold text-white">{name}</p>
+        <p className="text-safety-green">{title}</p>
       </div>
     </div>
   );
 };
 
-const TestimonialsSection: FC = () => {
+const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-black">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">What School Leaders Are Saying</h2>

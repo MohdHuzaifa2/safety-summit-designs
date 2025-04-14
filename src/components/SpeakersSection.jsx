@@ -1,17 +1,7 @@
 
-import { FC } from 'react';
-
-interface SpeakerProps {
-  name: string;
-  title: string;
-  bio: string;
-  quote: string;
-  imageSrc: string;
-}
-
-const Speaker: FC<SpeakerProps> = ({ name, title, bio, quote, imageSrc }) => {
+const Speaker = ({ name, title, bio, quote, imageSrc }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+    <div className="bg-black rounded-lg shadow-md overflow-hidden border border-safety-green/20">
       <div className="md:flex">
         <div className="md:w-1/3">
           <img 
@@ -21,10 +11,10 @@ const Speaker: FC<SpeakerProps> = ({ name, title, bio, quote, imageSrc }) => {
           />
         </div>
         <div className="p-6 md:w-2/3">
-          <h3 className="text-2xl font-bold text-safety-blue mb-1">{name}</h3>
+          <h3 className="text-2xl font-bold text-safety-green mb-1">{name}</h3>
           <p className="text-safety-red font-semibold mb-4">{title}</p>
-          <p className="text-safety-gray mb-6">{bio}</p>
-          <blockquote className="border-l-4 border-safety-blue pl-4 italic">
+          <p className="text-gray-300 mb-6">{bio}</p>
+          <blockquote className="border-l-4 border-safety-green pl-4 italic text-gray-400">
             "{quote}"
           </blockquote>
         </div>
@@ -33,9 +23,9 @@ const Speaker: FC<SpeakerProps> = ({ name, title, bio, quote, imageSrc }) => {
   );
 };
 
-const SpeakersSection: FC = () => {
+const SpeakersSection = () => {
   return (
-    <section id="speakers" className="py-16 bg-white">
+    <section id="speakers" className="py-16 bg-black">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">Meet Our Expert Speakers</h2>

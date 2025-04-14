@@ -1,18 +1,17 @@
 
-import { FC } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RegistrationForm from '../components/RegistrationForm';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield } from 'lucide-react';
 
-const Register: FC = () => {
+const Register = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
       <main className="flex-grow">
         {/* Registration Header */}
-        <section className="relative bg-gradient-to-b from-black to-[#121212] text-white py-16 overflow-hidden">
+        <section className="relative bg-black text-white py-16 overflow-hidden">
           {/* Background Pattern */}
           <div 
             className="absolute inset-0 opacity-5"

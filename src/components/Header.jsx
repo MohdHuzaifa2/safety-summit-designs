@@ -1,11 +1,10 @@
 
-import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Shield } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from './ui/button';
 
-const Header: FC = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

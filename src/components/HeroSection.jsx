@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Shield, ArrowRight } from 'lucide-react';
 
-const HeroSection: FC = () => {
+const HeroSection = () => {
   return (
     <section className="relative bg-black text-white py-24 md:py-32 overflow-hidden">
       {/* Animated Background Pattern */}

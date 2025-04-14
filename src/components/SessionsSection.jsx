@@ -1,5 +1,4 @@
 
-import { FC } from 'react';
 import { 
   ShieldAlert, 
   FileText, 
@@ -10,31 +9,25 @@ import {
   BarChart3 
 } from 'lucide-react';
 
-interface SessionProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-const Session: FC<SessionProps> = ({ icon, title, description }) => {
+const Session = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="bg-black p-6 rounded-lg shadow-md border border-safety-green/20">
       <div className="flex items-start">
-        <div className="mr-4 text-safety-blue">
+        <div className="mr-4 text-safety-green">
           {icon}
         </div>
         <div>
-          <h3 className="text-lg font-bold mb-2">{title}</h3>
-          <p className="text-safety-gray">{description}</p>
+          <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
+          <p className="text-gray-300">{description}</p>
         </div>
       </div>
     </div>
   );
 };
 
-const SessionsSection: FC = () => {
+const SessionsSection = () => {
   return (
-    <section id="sessions" className="py-16 bg-safety-light">
+    <section id="sessions" className="py-16 bg-[#0a0a0a]">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">Key Training Sessions</h2>
@@ -89,7 +82,7 @@ const SessionsSection: FC = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <div className="bg-safety-blue text-white p-8 rounded-lg inline-block">
+          <div className="bg-safety-blue/20 text-white p-8 rounded-lg inline-block border border-safety-blue/30">
             <h3 className="text-2xl font-bold mb-3">Register Today – Spots Are Limited!</h3>
             <p className="mb-6">
               To ensure personalized training and maximum impact, we're limiting attendance to 100 school leaders per location.

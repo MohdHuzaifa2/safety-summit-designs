@@ -1,38 +1,37 @@
 
-import { FC } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const CTASection: FC = () => {
+const CTASection = () => {
   return (
-    <section className="py-16 bg-safety-blue text-white">
+    <section className="py-16 bg-black border-t border-safety-green/20">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Reserve Your Spot at the School Safety Leadership Summit</h2>
-          <p className="text-xl mb-8 opacity-90">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Reserve Your Spot at the School Safety Leadership Summit</h2>
+          <p className="text-xl mb-8 opacity-90 text-gray-300">
             Join fellow school leaders for this transformative one-day training event and return to your campus with 
             actionable strategies and renewed confidence.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-safety-dark bg-opacity-30 p-8 rounded-lg">
+            <div className="bg-safety-blue/20 p-8 rounded-lg border border-safety-blue/30">
               <div className="flex items-center justify-center mb-4">
-                <Calendar className="mr-2 h-6 w-6" />
+                <Calendar className="mr-2 h-6 w-6 text-safety-green" />
                 <span className="text-xl font-semibold">June 16th, 2024</span>
               </div>
               <div className="flex items-center justify-center">
-                <MapPin className="mr-2 h-6 w-6" />
+                <MapPin className="mr-2 h-6 w-6 text-safety-green" />
                 <span className="text-xl">Pinehurst, North Carolina</span>
               </div>
             </div>
             
-            <div className="bg-safety-dark bg-opacity-30 p-8 rounded-lg">
+            <div className="bg-safety-blue/20 p-8 rounded-lg border border-safety-blue/30">
               <div className="flex items-center justify-center mb-4">
-                <Calendar className="mr-2 h-6 w-6" />
+                <Calendar className="mr-2 h-6 w-6 text-safety-green" />
                 <span className="text-xl font-semibold">June 18th, 2024</span>
               </div>
               <div className="flex items-center justify-center">
-                <MapPin className="mr-2 h-6 w-6" />
+                <MapPin className="mr-2 h-6 w-6 text-safety-green" />
                 <span className="text-xl">Montgomery, Alabama</span>
               </div>
             </div>

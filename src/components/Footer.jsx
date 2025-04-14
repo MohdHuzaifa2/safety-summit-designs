@@ -1,18 +1,17 @@
 
-import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const Footer: FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-safety-blue text-white py-12">
+    <footer className="bg-black text-white py-12 border-t border-safety-green/20">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
               <svg 
                 viewBox="0 0 24 24" 
-                className="h-8 w-8 text-white mr-2" 
+                className="h-8 w-8 text-safety-green mr-2" 
                 fill="none" 
                 stroke="currentColor" 
                 strokeWidth="2" 
@@ -24,7 +23,7 @@ const Footer: FC = () => {
                 <path d="M12 12L4 6" />
                 <path d="M12 12l8-6" />
               </svg>
-              <span className="font-montserrat font-bold text-xl">School Safety Leadership Summit</span>
+              <span className="font-inter-tight font-bold text-xl">School Safety Leadership Summit</span>
             </div>
             <p className="text-gray-300 mb-4">
               Equipping school leaders with the tools, strategies, and confidence they need to protect their campuses.
@@ -57,7 +56,7 @@ const Footer: FC = () => {
                 <p>June 18th, 2024</p>
               </li>
               <li className="mt-4">
-                <Link to="/register" className="text-white hover:text-safety-red transition-colors underline">
+                <Link to="/register" className="text-white hover:text-safety-green transition-colors underline">
                   Register Now
                 </Link>
               </li>
@@ -67,7 +66,7 @@ const Footer: FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <p className="mb-2">Have questions about the Summit?</p>
-            <a href="mailto:contact@schoolsafetysummit.com" className="text-white hover:text-safety-red transition-colors">
+            <a href="mailto:contact@schoolsafetysummit.com" className="text-white hover:text-safety-green transition-colors">
               contact@schoolsafetysummit.com
             </a>
             <p className="mt-4">&copy; {new Date().getFullYear()} School Safety Leadership Summit. All rights reserved.</p>
